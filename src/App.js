@@ -9,13 +9,14 @@ import Cart from "./Components/Cart/Cart";
 import Shop from "./Components/Shop/Shop";
 import Blog from "./Components/Blog/Blog";
 import About from "./Components/About/About"
+import HomePage from "./Components/HomeBanners/HomePage";
 function App() {
   const [cartQuantity, setCartQuantity] = useState(0)
   return (
     <div className="App">
       <Navbar cartQuantity={cartQuantity} />
       <Routes>
-        <Route path='/' element={<StoreBanner />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/about' element={<About />} />

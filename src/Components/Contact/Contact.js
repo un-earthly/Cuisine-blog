@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../utils/Button'
+import Input from '../utils/Input'
 
 export default function Contact() {
     return (
@@ -14,22 +16,22 @@ export default function Contact() {
             </p>
             <form name="contactForm" className="mx-auto m-10">
                 <div className="flex flex-col">
-                    <label className="input__label input__label--light"> Name* </label>
-                    <input placeholder="Your name" type="text" className="bg-[#F1F1F1]  my-3 outline-none  p-[16px] pr-[56px]" />
+                    <label className=""> Name* </label>
+                    <Input placeholderTxt='Your Name' id={'firstName'} />
                 </div>
                 <div className="flex flex-col">
-                    <label className="input__label input__label--light"> Last name </label>
-                    <input placeholder="Your last name" type="text" className="bg-[#F1F1F1] my-3 outline-none  p-[16px] pr-[56px]" />
+                    <label className=""> Last name </label>
+                    <Input placeholderTxt="Your last name" id={'lastName'} />
                 </div>
                 <div className="flex flex-col">
-                    <label className="input__label input__label--light"> Your email* </label>
-                    <input placeholder="Your email address" type="text" className="bg-[#F1F1F1]  my-3 outline-none  p-[16px] pr-[56px]" />
+                    <label className=""> Your email* </label>
+                    <Input placeholderTxt="Your email address" id={'email'} />
                 </div>
                 <div className="flex flex-col">
-                    <label className="input__label input__label--light"> Message* </label>
+                    <label className=""> Message* </label>
                     <textarea placeholder="Enter your message" type="text" className="bg-[#F1F1F1]  my-3 outline-none  p-[16px] pr-[56px]" style={{ height: "158px" }}></textarea>
                 </div>
-                <button type="submit" name="submit" className="px-8 py-4 bg-black text-white text-center mx-auto block duration-500 hover:bg-[#272927]">Submit</button>
+                <Button btnText={'Submit'} />
             </form>
         </div>
     )
